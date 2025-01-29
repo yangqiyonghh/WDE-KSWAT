@@ -1,5 +1,5 @@
  
-Here is the code for the WDE-KSWAT model (Fortran language).
+Here is the code for the WDE-KSWAT and KSWAT models (Fortran language).
 
 The calibration and validation process is as follows: 
 1. Determine the distribution of karst features in the study area;
