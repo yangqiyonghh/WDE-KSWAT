@@ -1,8 +1,0 @@
-General Input/Output section (file.cio):                                        
-2024/5/11 0:00:00 ARCGIS-SWAT interface AV                                      
-                                                                                
-
-
- Year  Day Step  FLOWm^3/s    SEDmg/L   ORGNmg/L   ORGPmg/L    NO3mg/L    NH3mg/L    NO2mg/L   MINPmg/L   CBODmg/L  DISOXmg/L   CHLAug/L SOLPSTmg/L SORPSTmg/L  BACTPct/L BACTLPct/LCMETAL1mg/LCMETAL2mg/LCMETAL3mg/L   TEMPdegC
- 2007    1      0  0.289E-02  0.000E+00  0.363E-05  0.820E-05  0.488E-04  0.283E-01  0.119E-02  0.121E-03  0.000E+00  0.968E+01  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.161E+02
- 2007    2      0  0.113E-01  0.000E+00  0.184E-05  0.424E-05  0.127E-02  0.414E-01  0.277E-02  0.415E-02  0.000E+00  0.102E+02  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.000E+00  0.136E+02
