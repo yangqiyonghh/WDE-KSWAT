@@ -128,20 +128,20 @@
       aa=index(titldum,"Luse:")+5
       bb=index(titldum(aa:)," ")+aa-1
       luse=titldum(aa:bb)
-      if (luse=="AGRL")karst_hru(ihru)=2!Õ›µÿ—“»‹hru
-      if (luse=="FRST")karst_hru(ihru)=2!Õ›µÿ—“»‹hru,
-      if (luse=="PAST")karst_hru(ihru)=2!Õ›µÿ—“»‹hru,
-      if (luse=="WATR")karst_hru(ihru)=2!Õ›µÿ—“»‹hru,
-      if (luse=="URBN")karst_hru(ihru)=2!Õ›µÿ—“»‹hru,
-      if (luse=="BARR")karst_hru(ihru)=2!Õ›µÿ—“»‹hru,
-      if (luse=="AGR1")karst_hru(ihru)=0!∑«—“»‹hru,
-      if (luse=="FRS1")karst_hru(ihru)=0!∑«—“»‹hru,
-      if (luse=="PAS1")karst_hru(ihru)=0!∑«—“»‹hru,
-      if (luse=="WAT1")karst_hru(ihru)=0!∑«—“»‹hru,
-      if (luse=="URB1")karst_hru(ihru)=0!∑«—“»‹hru,
-      if (luse=="BAR1")karst_hru(ihru)=0!∑«—“»‹hru,
+      if (luse=="AGRL")karst_hru(ihru)=2! ›µ     hru
+      if (luse=="FRST")karst_hru(ihru)=2! ›µ     hru,
+      if (luse=="PAST")karst_hru(ihru)=2! ›µ     hru,
+      if (luse=="WATR")karst_hru(ihru)=2! ›µ     hru,
+      if (luse=="URBN")karst_hru(ihru)=2! ›µ     hru,
+      if (luse=="BARR")karst_hru(ihru)=2! ›µ     hru,
+      if (luse=="AGR1")karst_hru(ihru)=0!      hru,
+      if (luse=="FRS1")karst_hru(ihru)=0!      hru,
+      if (luse=="PAS1")karst_hru(ihru)=0!      hru,
+      if (luse=="WAT1")karst_hru(ihru)=0!      hru,
+      if (luse=="URB1")karst_hru(ihru)=0!      hru,
+      if (luse=="BAR1")karst_hru(ihru)=0!      hru,
       
-      !1¥˙±ÌÃºÀ·—Œ—“¡—œ∂»‹∂¥ÀÆ£∫ Øª“—“¡—œ∂»‹∂¥ÀÆ
+      !1    Ãº        œ∂ ‹∂ ÀÆ   Ø      œ∂ ‹∂ ÀÆ
       if (luse=="AGRL" .or. luse=="AGR5" )karst_type(ihru)=1
       if (luse=="FRST" .or. luse=="FRS5" )karst_type(ihru)=1
       if (luse=="PAST" .or. luse=="PAS5" )karst_type(ihru)=1
@@ -149,7 +149,7 @@
       if (luse=="URBN" .or. luse=="URB5" )karst_type(ihru)=1
       if (luse=="BARR" .or. luse=="BAR5" )karst_type(ihru)=1
       
-      !2¥˙±ÌÃºÀ·—Œ—“º–ÀÈ–º—“¡—œ∂»‹∂¥ÀÆ
+      !2    Ãº     “º   –º    œ∂ ‹∂ ÀÆ
       if (luse=="AGR3" .or. luse=="AGR2" )karst_type(ihru)=2
       if (luse=="FRS3" .or. luse=="FRS2" )karst_type(ihru)=2
       if (luse=="PAS3" .or. luse=="PAS2" )karst_type(ihru)=2
@@ -157,7 +157,7 @@
       if (luse=="URB3" .or. luse=="URB2" )karst_type(ihru)=2      
       if (luse=="BAR3" .or. luse=="BAR2" )karst_type(ihru)=2
       
-      !3¥˙±ÌÃºÀ·—Œ—“¡—œ∂»‹∂¥ÀÆ£∫∞◊‘∆—“¡—œ∂ø◊∂¥¡—œ∂ÀÆ
+      !3    Ãº        œ∂ ‹∂ ÀÆ          œ∂ ◊∂   œ∂ÀÆ
       if (luse=="AGR4")karst_type(ihru)=3
       if (luse=="FRS4")karst_type(ihru)=3
       if (luse=="PAS4")karst_type(ihru)=3

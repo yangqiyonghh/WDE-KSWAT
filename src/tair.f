@@ -1,4 +1,4 @@
-      function tair(hr,jj)
+       function tair(hr,jj)
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this function approximates hourly air temperature from daily max and

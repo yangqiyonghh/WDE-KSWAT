@@ -1,4 +1,4 @@
-      subroutine soil_phys
+       subroutine soil_phys
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine initializes soil physical properties

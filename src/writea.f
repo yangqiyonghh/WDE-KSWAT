@@ -1,4 +1,4 @@
-      subroutine writea
+       subroutine writea
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes annual output

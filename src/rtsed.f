@@ -1,4 +1,4 @@
-      subroutine rtsed
+       subroutine rtsed
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine routes sediment from subbasin to basin outlets

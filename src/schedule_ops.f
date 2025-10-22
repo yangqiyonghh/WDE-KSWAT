@@ -1,4 +1,4 @@
-      subroutine schedule_ops
+       subroutine schedule_ops
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine controls the simulation of the land phase of the 

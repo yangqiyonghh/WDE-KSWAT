@@ -8,7 +8,7 @@
 !!    name        |units         |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 !!    blai(:)     |none          |maximum (potential) leaf area index
-!!    canmx(:)    |mm H2O        |maximum canopy storage
+!!    canmx(:)    |mm H2O        |maxsimum canopy storage
 !!    canstor(:)  |mm H2O        |amount of water held in canopy storage
 !!    icr(:)      |none          |sequence number of crop grown within a year
 !!    idplt(:,:,:)|none          |land cover code from crop.dat

@@ -1,4 +1,4 @@
-      subroutine solt
+       subroutine solt
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine estimates daily average temperature at the bottom

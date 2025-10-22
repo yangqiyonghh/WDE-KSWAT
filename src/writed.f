@@ -1,4 +1,4 @@
-      subroutine writed
+       subroutine writed
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine contains the daily output writes

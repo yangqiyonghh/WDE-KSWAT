@@ -1,4 +1,4 @@
-      subroutine rtdt
+       subroutine rtdt
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    This subroutine routes flow at any required time step through the reach 

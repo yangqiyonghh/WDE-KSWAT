@@ -11,7 +11,7 @@
 78    format(2e12.5)
         sumdat=sumdat+cal1
         sumout=sumout+cal2
-        end do
+        end do 
         ave=(sumout-sumdat)*100./sumdat
         return
         end

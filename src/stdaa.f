@@ -1,4 +1,4 @@
-      subroutine stdaa
+       subroutine stdaa
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes average annual output to .std file

@@ -1,4 +1,4 @@
-      subroutine ascrv(x1,x2,x3,x4,x5,x6)
+       subroutine ascrv(x1,x2,x3,x4,x5,x6)
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine computes shape parameters x5 and x6 for the S curve 
@@ -8,7 +8,7 @@
 !!    and x6 is determined by solving the equation with x and y values measured
 !!    close to one of the endpoints of the curve (100% of the maximum value for
 !!    x) This subroutine is called from readbsn.f and readcrop.f
-
+ 
 !!    ~ ~ ~ INCOMING VARIABLES ~ ~ ~
 !!    name        |units         |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 

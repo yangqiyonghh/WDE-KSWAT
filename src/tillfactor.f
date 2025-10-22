@@ -12,7 +12,7 @@
 	! YY = tillagef(l,jj) / ZZ
 	! Since the tillage factor function is non linear, iterations are needed 
 	! XX = 0.5 is the initial value that works OK for the range of values observed
-	! If a layer is only partially tilled then emix is corrected accordingly
+	! If a layer is only partially tilled then emix is corrected accordingly 
       use parm
 	
 	integer, intent (in) :: jj

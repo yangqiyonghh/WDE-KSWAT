@@ -1,4 +1,4 @@
-      subroutine apply
+       subroutine apply
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine applies pesticide
@@ -9,7 +9,7 @@
 !!    ap_ef(:)     |none             |application efficiency (0-1)
 !!    curyr        |none             |current year of simulation
 !!    drift(:)     |kg               |amount of pesticide drifting onto main 
-!!                                   |channel in subbasin
+!!                                   |channel in subbasin 
 !!    driftco(:)   |none             |coefficient for pesticide drift directly
 !!                                   |onto stream
 !!    hru_dafr(:)  |km**2/km**2      |fraction of watershed area in HRU

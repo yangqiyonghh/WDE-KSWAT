@@ -1,4 +1,4 @@
-      subroutine wndgen(j)
+       subroutine wndgen(j)
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine generates wind speed

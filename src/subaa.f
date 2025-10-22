@@ -1,4 +1,4 @@
-      subroutine subaa(years)
+       subroutine subaa(years)
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes average annual subbasin output to the output.sub file

@@ -10,7 +10,7 @@
 !!                                  |day
 !!    auto_wstr(:)   |none or mm    |water stress threshold that triggers irrigation
 !!    deepst(:)      |mm H2O        |depth of water in deep aquifer
-!!    hru_sub(:)     |none          |subbasin in which HRU is located
+!!    hru_sub(:)     |none          |subbasin in which HRU is located 
 !!    wstrs_id(:)    |none          |water stress identifier:
 !!                                  |1 plant water demand
 !!                                  |2 soil water deficit

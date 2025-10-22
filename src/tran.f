@@ -1,4 +1,4 @@
-      subroutine tran
+       subroutine tran
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine computes tributary channel transmission losses     

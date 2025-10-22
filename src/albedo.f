@@ -7,7 +7,7 @@
 !!    name        |units         |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 !!    ihru        |none          |HRU number
-!!    laiday(:)   |m**2/m**2     |leaf area index
+!!    laiday(:)   |m**2/m**2      |leaf area index
 !!    sno_hru(:)  |mm H2O        |amount of water in snow in HRU on current day
 !!    sol_alb(:)  |none          |albedo when soil is moist
 !!    sol_cov(:)  |kg/ha         |amount of residue on soil surface

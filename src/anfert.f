@@ -12,7 +12,7 @@
 !!    fminp(:)    |kg minP/kg frt|fraction of fertilizer which is mineral
 !!                               |phosphorus
 !!    fnh3n(:)    |kg NH3-N/kg N |fraction of mineral N content of
-!!                               |fertilizer which is NH3
+!!                               |fertilizer which is NH3 
 !!    forgn(:)    |kg orgN/kg frt|fraction of fertilizer which is organic
 !!                               |nitrogen
 !!    forgp(:)    |kg orgP/kg frt|fraction of fertilizer which is organic

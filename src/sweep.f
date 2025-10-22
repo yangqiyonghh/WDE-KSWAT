@@ -1,4 +1,4 @@
-      subroutine sweep
+         subroutine sweep
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    the subroutine performs the street sweeping operation

@@ -1,4 +1,4 @@
-      subroutine surfst_h2o
+       subroutine surfst_h2o
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine determines the net surface runoff reaching the 

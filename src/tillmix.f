@@ -1,4 +1,4 @@
-      subroutine tillmix(jj,bmix)
+       subroutine tillmix(jj,bmix)
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine mixes residue and nutrients during tillage and 

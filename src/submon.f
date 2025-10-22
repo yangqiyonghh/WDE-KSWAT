@@ -1,4 +1,4 @@
-      subroutine submon
+       subroutine submon
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes monthly subbasin output to the output.sub file

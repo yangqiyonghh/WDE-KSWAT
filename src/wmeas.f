@@ -1,4 +1,4 @@
-      subroutine wmeas
+       subroutine wmeas
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine reads in wind speed data from file and assigns the

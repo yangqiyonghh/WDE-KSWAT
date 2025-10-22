@@ -1,4 +1,4 @@
-      subroutine ttcoef_wway     
+       subroutine ttcoef_wway     
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine computes travel time coefficients for routing
 !!    along the main channel - grassed waterways

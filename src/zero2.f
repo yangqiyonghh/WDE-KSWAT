@@ -2,7 +2,7 @@
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine zeros all array values
-
+ 
       use parm
       
       hrumono = 0.

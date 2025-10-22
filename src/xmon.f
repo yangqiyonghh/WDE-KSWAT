@@ -1,4 +1,4 @@
-      subroutine xmon
+       subroutine xmon
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine determines the month, given the julian date and leap

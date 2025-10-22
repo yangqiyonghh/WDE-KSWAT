@@ -391,13 +391,13 @@
       read (103,1000) titldum
       read (103,1000) titldum
       read (103,1000) titldum
-      read (103,*) sftmp!已用
-      read (103,*) smtmp!已用
-      read (103,*) smfmx!已用
-      read (103,*) smfmn!已用
-      read (103,*) timp!已用
-      read (103,*) snocovmx!已用
-      read (103,*) sno50cov!已用
+      read (103,*) sftmp!    
+      read (103,*) smtmp!    
+      read (103,*) smfmx!    
+      read (103,*) smfmn!    
+      read (103,*) timp!    
+      read (103,*) snocovmx!    
+      read (103,*) sno50cov!    
       read (103,*) ipet
       read (103,1000) petfile
       read (103,*) escobsn
@@ -410,39 +410,39 @@
       read (103,*) surlag_bsn
       read (103,*) adj_pkr
       read (103,*) prf_bsn
-      read (103,*) spcon_bsn!已用
-      read (103,*) spexp_bsn!已用
+      read (103,*) spcon_bsn!    
+      read (103,*) spexp_bsn!    
       read (103,1000) titldum
-      read (103,*) RCN11!已用
-      read (103,*) cmn_bsn!已用
-      read (103,*) n_updis!已用
-      read (103,*) p_updis!已用
-      read (103,*) nperco_bsn!已用
-      read (103,*) pperco_bsn!已用
-      read (103,*) phoskd_bsn!已用
-      read (103,*) psp_bsn!已用
-      read (103,*) rsdco!已用
+      read (103,*) RCN11!    
+      read (103,*) cmn_bsn!    
+      read (103,*) n_updis!    
+      read (103,*) p_updis!    
+      read (103,*) nperco_bsn!    
+      read (103,*) pperco_bsn!    
+      read (103,*) phoskd_bsn!    
+      read (103,*) psp_bsn!    
+      read (103,*) rsdco!    
       read (103,1000) titldum
-      read (103,*) percop!已用
+      read (103,*) percop!    
       read (103,1000) titldum
       read (103,*) isubwq
       read (103,1000) titldum
-      read (103,*) wdpq! !已用
-      read (103,*) wgpq! !已用
-      read (103,*) wdlpq! !未用用
-      read (103,*) wglpq! !未用用
-      read (103,*) wdps! !未用
-      read (103,*) wgps! !未用
-      read (103,*) wdlps! !未用
-      read (103,*) wglps! !未用
-      read (103,*) bactkdq! !未用
-      read (103,*) thbact! !未用
-      read (103,*) wof_p! !未用
-      read (103,*) wof_lp! !未用
-      read (103,*) wdpf! !未用
-      read (103,*) wgpf! !未用
-      read (103,*) wdlpf! !未用
-      read (103,*) wglpf! !未用
+      read (103,*) wdpq! !    
+      read (103,*) wgpq! !    
+      read (103,*) wdlpq! !未    
+      read (103,*) wglpq! !未    
+      read (103,*) wdps! !未  
+      read (103,*) wgps! !未  
+      read (103,*) wdlps! !未  
+      read (103,*) wglps! !未  
+      read (103,*) bactkdq! !未  
+      read (103,*) thbact! !未  
+      read (103,*) wof_p! !未  
+      read (103,*) wof_lp! !未  
+      read (103,*) wdpf! !未  
+      read (103,*) wgpf! !未  
+      read (103,*) wdlpf! !未  
+      read (103,*) wglpf! !未  
       read (103,1001) ised_det
       read (103,1000) titldum
       read (103,*) irte
@@ -456,43 +456,43 @@
       read (103,*) evrch
       read (103,*) irtpest
       read (103,*) icn
-      read (103,*) cncoef! !未用
-      read (103,*) cdn_bsn! !未用
-      read (103,*) sdnco_bsn !未用
-      read (103,*) bact_swf! !未用
-      read (103,*,iostat=eof) bactmx! !未用
+      read (103,*) cncoef! !未  
+      read (103,*) cdn_bsn! !未  
+      read (103,*) sdnco_bsn !未  
+      read (103,*) bact_swf! !未  
+      read (103,*,iostat=eof) bactmx! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) bactminlp!! !未用
+      read (103,*,iostat=eof) bactminlp!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) bactminp!! !未用
+      read (103,*,iostat=eof) bactminp!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) wdlprch!! !未用
+      read (103,*,iostat=eof) wdlprch!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) wdprch!! !未用
+      read (103,*,iostat=eof) wdprch!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) wdlpres!! !未用
+      read (103,*,iostat=eof) wdlpres!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) wdpres!! !未用
+      read (103,*,iostat=eof) wdpres!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) tb_adj!! !未用
+      read (103,*,iostat=eof) tb_adj!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) depimp_bsn!! !未用
+      read (103,*,iostat=eof) depimp_bsn!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) ddrain_bsn! !未用
+      read (103,*,iostat=eof) ddrain_bsn! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) tdrain_bsn!! !未用
+      read (103,*,iostat=eof) tdrain_bsn!! !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) gdrain_bsn!! !未用
+      read (103,*,iostat=eof) gdrain_bsn!! !未  
       if (eof < 0) exit
       read (103,*,iostat=eof) cn_froz
       if (eof < 0) exit
       read (103,*,iostat=eof) dorm_hr
       if (eof < 0) exit
-      read (103,*,iostat=eof) smxco  !未用
+      read (103,*,iostat=eof) smxco  !未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) fixco!!未用
+      read (103,*,iostat=eof) fixco!!未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) nfixmx!!未用
+      read (103,*,iostat=eof) nfixmx!!未  
       if (eof < 0) exit
       read (103,*,iostat=eof) anion_excl_bsn
       if (eof < 0) exit
@@ -504,15 +504,15 @@
       if (eof < 0) exit
       read (103,*,iostat=eof) rcn_sub_bsn    
       if (eof < 0) exit
-      read (103,*,iostat=eof) bc1_bsn!!未用
+      read (103,*,iostat=eof) bc1_bsn!!未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) bc2_bsn!!未用
+      read (103,*,iostat=eof) bc2_bsn!!未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) bc3_bsn!!未用
+      read (103,*,iostat=eof) bc3_bsn!!未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) bc4_bsn!!未用
+      read (103,*,iostat=eof) bc4_bsn!!未  
       if (eof < 0) exit
-      read (103,*,iostat=eof) decr_min!!未用
+      read (103,*,iostat=eof) decr_min!!未  
       if (eof < 0) exit
       read (103,*,iostat=eof) icfac
       if (eof < 0) exit
@@ -546,7 +546,7 @@
  !!   subdaily erosion modeling by Jaehak Jeong
       read (103,*,iostat=eof) titldum
       if (eof < 0) exit
-      read (103,*,iostat=eof) eros_spl!未用
+      read (103,*,iostat=eof) eros_spl!未  
       if (eof < 0) exit
       read (103,*,iostat=eof) rill_mult
       if (eof < 0) exit

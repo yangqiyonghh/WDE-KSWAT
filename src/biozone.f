@@ -7,7 +7,7 @@
 !!    ~ ~ ~ INCOMING VARIABLES ~ ~ ~
 !!    name             |units         |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-!!    bio_bd(:)        |kg/m^3        |density of biomass 
+!!    bio_bd(:)        |kg/sm^3        |density of biomass 
 !!    bio_bod(:)       |kg/ha         |BOD concentration in biozone
 !!    biom(:)          |kg/ha         |biomass of live bacteria in biozone       
 !!    bz_thk(:)        |mm            |thickness of biozone                    

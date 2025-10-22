@@ -99,40 +99,40 @@
       real :: xx
       integer :: eof,num
       station_flag=0
-      api_idum=1!¿ªÆô¸ÉÊªÄ£Äâ
+      api_idum=1!     ÊªÄ£  
       open(1111,file="parm.txt")
       read(1111,*)station_flag
       read(1111,*)num
       if (station_flag==1)then
-          allocate(karst_parm(num))!´æ·ÅÒÑÂÊ¶¨ºÃµÄÉÏÓÎ²ÎÊı
+          allocate(karst_parm(num))!      Ê¶  Ãµ    Î²   
           do k=1,num
               read(1111,*)karst_parm(k)
           end do
       end if
       open (1122,file="runoff.txt")
           
-      alpha_delay1=sftmp!(0.1-5)ÏÂÉø¸ø±í²ãÑÒÈÜ´øµÄÑÓ³ÙÏµÊı£¬¾ÍÊÇ±ÈÈçÍÁÈÀÏÂÉøÁ¿²¢²»ÊÇÒ»ÏÂ×Ó¾Í²¹¸øµ½ÑÒÈÜ´øÖĞ£¬´æÔÚÖÍÊ±£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      alpha_delay2=smtmp!(0.1-5)±í²ãÑÒÈÜ´ø´«µİ¸ø»ùÖÊµÄ¹ı³Ì£¬,´æÔÚÖÍÊ±£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      sur_karst_h1=smfmn!(1-50)±í²ãÑÒÈÜ´ø·¢ÉúÑÓ³ÙÁ÷µÄãĞÖµË®Éî
-      sur_karst_h2=smfmn+smfmx!(1-20)±í²ãÑÒÈÜ´ø·¢Éú¶ş´ÎÁ÷µÄãĞÖµË®Éî
-      k_sec=timp!(0.0001-0.5)±í²ãÑÒÈÜ´ø¶ş´ÎÁ÷µÄ³öÁ÷±ÈÁ÷Á¿ÏµÊı(ÏßĞÔ³öÁ÷)£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      k_eh=snocovmx!(0.0001-0.5)±í²ãÑÒÈÜ´øÑÓ³Ù³öÁ÷±ÈÁ÷Á¿ÏµÊı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      alpha_eh=sno50cov!(0.5-2)±í²ãÑÒÈÜ´øÑÓ³Ù³öÁ÷Ö¸ÊıÏµÊı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      k_f=spcon_bsn!(0.0001-0.5)±í²ãÑÒÈÜ´ø´«µİ¸ø¹ÜµÀÁ÷£¬ÕâÀïÓë»ùÖÊÁ÷´«µİ·½Ê½²»Ò»Ñù£¬ÏßĞÔ´«µİ£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      gw_karst_delaye=spexp_bsn!(0.1-5)²¹¸øµØÏÂÑÒÈÜ»ùÖÊµÄÑÓ³ÙÏµÊı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      gw_alpha_bfe=n_updis!(0.1-5)µØÏÂÑÒÈÜ»ùÖÊ³öÁ÷µÄÑÓ³ÙÏµÊı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      k_fm=p_updis!(0.0001-0.5)¹ÜµÀÁ÷µÄ³öÁ÷ÏµÊı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      alpha_FM=pperco_bsn!(0.5-3)¹ÜµÀÁ÷µÄ±ÈÁ÷Á¿Ö¸ÊıÏµÊı?£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      k_sc=phoskd_bsn!(0.0001-0.5)»ùÖÊºÍ¹ÜµÀµÄ½»»»ÏµÊı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      alpha_sc=psp_bsn!(0.1-1)»ùÖÊºÍ¹ÜµÀµÄ½»»»Ö¸Êı£¬¿É·Ö¸ÉÊªÆÚ¼ä
-      karst_he=RCN11 !(1-25)±í²ãÑÒÈÜ´ø³õÊ¼Ë®Éî
-      karst_hs=nperco_bsn!(1-25)»ùÖÊ³õÊ¼Ë®Éî
-      karst_hf=eros_spl!(1-25)¹ÜµÀ³õÊ¼Ë®Éî
-      gw_karst_h1=wdpq!ÑÒÈÜ»ùÖÊãĞÖµË®Éî(1-50)
-      gw_karst_h2=wgpq!ÑÒÈÜ¹ÜµÀãĞÖµË®Éî(1-50)
-      sub_karst=1 !1:µó½­Á÷Óò,0:äè½­Á÷Óò
-      cn_flag=0!ĞŞ¸ÄCN
-      call gw_karst_num   !µØÏÂºÓËùÔÚ×ÓÁ÷ÓòµÄ±àºÅ
+      alpha_delay1=sftmp!(0.1-5)            Ü´    Ó³ Ïµ       Ç±                   Ò»   Ó¾Í²        Ü´  Ğ£       Ê±   É·Ö¸ Êª Ú¼ 
+      alpha_delay2=smtmp!(0.1-5)      Ü´    İ¸    ÊµÄ¹  Ì£ ,      Ê±   É·Ö¸ Êª Ú¼ 
+      sur_karst_h1=smfmn!(1-50)      Ü´      Ó³       ÖµË®  
+      sur_karst_h2=smfmn+smfmx!(1-20)      Ü´               ÖµË®  
+      k_sec=timp!(0.0001-0.5)      Ü´        Ä³         Ïµ  (   Ô³   )   É·Ö¸ Êª Ú¼ 
+      k_eh=snocovmx!(0.0001-0.5)      Ü´  Ó³Ù³         Ïµ     É·Ö¸ Êª Ú¼ 
+      alpha_eh=sno50cov!(0.5-2)      Ü´  Ó³Ù³   Ö¸  Ïµ     É·Ö¸ Êª Ú¼ 
+      k_f=spcon_bsn!(0.0001-0.5)      Ü´    İ¸  Üµ                   İ· Ê½  Ò»       Ô´  İ£  É·Ö¸ Êª Ú¼ 
+      gw_karst_delaye=spexp_bsn!(0.1-5)           Ü»  Êµ  Ó³ Ïµ     É·Ö¸ Êª Ú¼ 
+      gw_alpha_bfe=n_updis!(0.1-5)       Ü»  Ê³      Ó³ Ïµ     É·Ö¸ Êª Ú¼ 
+      k_fm=p_updis!(0.0001-0.5) Üµ    Ä³   Ïµ     É·Ö¸ Êª Ú¼ 
+      alpha_FM=pperco_bsn!(0.5-3) Üµ    Ä±     Ö¸  Ïµ  ?   É·Ö¸ Êª Ú¼ 
+      k_sc=phoskd_bsn!(0.0001-0.5)   ÊºÍ¹Üµ  Ä½   Ïµ     É·Ö¸ Êª Ú¼ 
+      alpha_sc=psp_bsn!(0.1-1)   ÊºÍ¹Üµ  Ä½   Ö¸     É·Ö¸ Êª Ú¼ 
+      karst_he=RCN11 !(1-25)      Ü´   Ê¼Ë®  
+      karst_hs=nperco_bsn!(1-25)   Ê³ Ê¼Ë®  
+      karst_hf=eros_spl!(1-25) Üµ   Ê¼Ë®  
+      gw_karst_h1=wdpq!   Ü»     ÖµË®  (1-50)
+      gw_karst_h2=wgpq!   Ü¹Üµ   ÖµË®  (1-50)
+      sub_karst=1 !1:      ,0: è½­    
+      cn_flag=0! Ş¸ CN
+      call gw_karst_num   !   Âº           Ä±  
       eof = 0
 
       do curyr = 1, nbyr

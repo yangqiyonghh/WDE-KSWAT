@@ -1,4 +1,4 @@
-      subroutine ttcoef(k)
+       subroutine ttcoef(k)
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine computes travel time coefficients for routing

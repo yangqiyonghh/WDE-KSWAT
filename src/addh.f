@@ -8,7 +8,7 @@
 !!    hhvaroute(:,:,:)|varies    |routing storage array for hourly time step
 !    ievent      |none          |rainfall/runoff code
 !!                               |0 daily rainfall/curve number technique
-!!                               |1 sub-daily rainfall/Green&Ampt/hourly
+!!                                |1 sub-daily rainfall/Green&Ampt/hourly
 !!                               |  routing
 !!                               |3 sub-daily rainfall/Green&Ampt/hourly routing
 !!    ihout       |none          |outflow hydrograph storage location number

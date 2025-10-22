@@ -1,4 +1,4 @@
-      subroutine writeaa
+       subroutine writeaa
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes average annual output

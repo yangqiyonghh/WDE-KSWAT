@@ -8,7 +8,7 @@
 !!    name             |units          |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 !!    biofilm_mumax(:) |               |
-!!    biofilm_kinv(:)  |               |
+!!    biofilm_kinv(:)  |               | 
 !!    biofilm_klw(:)   |               |
 !!    biofilm_kla(:)   |               |
 !!    biofilm_cdet(:)  |               |

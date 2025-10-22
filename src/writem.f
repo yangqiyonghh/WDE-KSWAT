@@ -1,4 +1,4 @@
-      subroutine writem
+       subroutine writem
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes monthly output

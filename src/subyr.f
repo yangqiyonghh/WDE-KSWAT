@@ -1,4 +1,4 @@
-      subroutine subyr
+       subroutine subyr
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes annual subbasin output to the output.sub file

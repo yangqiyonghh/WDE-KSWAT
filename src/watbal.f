@@ -1,4 +1,4 @@
-      subroutine watbal
+       subroutine watbal
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine computes the daily water balance for each HRU

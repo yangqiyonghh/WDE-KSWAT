@@ -1,4 +1,4 @@
-      subroutine soil_chem
+       subroutine soil_chem
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine initializes soil chemical properties

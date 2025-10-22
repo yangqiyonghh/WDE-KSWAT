@@ -1,4 +1,4 @@
-      subroutine swu
+       subroutine swu
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine distributes potential plant evaporation through

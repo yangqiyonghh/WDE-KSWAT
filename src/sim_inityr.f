@@ -1,4 +1,4 @@
-      subroutine sim_inityr
+       subroutine sim_inityr
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine initializes variables at the beginning of the year

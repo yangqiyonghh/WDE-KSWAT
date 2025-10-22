@@ -1,4 +1,4 @@
-      subroutine tstr
+       subroutine tstr
       
 !!     ~ ~ ~ PURPOSE ~ ~ ~
 !!     computes temperature stress for crop growth - strstmp

@@ -11,7 +11,7 @@
 !!    id1         |julian date   |first day of simulation in year
 !!    ievent      |none          |rainfall/runoff code
 !!                               |0 daily rainfall/curve number technique
-!!                               |1 sub-daily rainfall/Green&Ampt/hourly
+!!                                |1 sub-daily rainfall/Green&Ampt/hourly
 !!                               |  routing
 !!                               |3 sub-daily rainfall/Green&Ampt/hourly routing
 !!    inum1       |none          |reach number

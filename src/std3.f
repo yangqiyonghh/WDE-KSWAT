@@ -1,4 +1,4 @@
-      subroutine std3
+       subroutine std3
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes the annual table header to the standard output 

@@ -1,4 +1,4 @@
-      subroutine substor
+       subroutine substor
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine stores and lags lateral soil flow and nitrate

@@ -1,4 +1,4 @@
-      subroutine soil_par
+       subroutine soil_par
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine reads data from the HRU/subbasin soil properties file 

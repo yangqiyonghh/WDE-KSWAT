@@ -1,4 +1,4 @@
-      function theta(r20,thk,tmp)
+       function theta(r20,thk,tmp)
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this function corrects rate constants for temperature

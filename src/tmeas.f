@@ -1,4 +1,4 @@
-      subroutine tmeas
+       subroutine tmeas
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine reads in temperature data and assigns it to the HRUs

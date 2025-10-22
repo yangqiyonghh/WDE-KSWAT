@@ -1,4 +1,4 @@
-      subroutine subwq
+       subroutine subwq
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine computes HRU loadings of chlorophyll-a, CBOD, 

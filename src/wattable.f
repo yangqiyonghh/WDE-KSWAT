@@ -1,4 +1,4 @@
-      subroutine wattable
+       subroutine wattable
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine is the master soil percolation component.

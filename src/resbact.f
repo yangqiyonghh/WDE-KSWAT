@@ -7,7 +7,7 @@
 !!    name             |units       |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 !!    inum1            |none        |reservoir number
-!!    inum2            |none        |inflow hydrograph storage location number
+!!    inum2            |noneq        |inflow hydrograph storage location number
 !!    res_bactlp(:)    |# cfu/100ml |less persistent bacteria stored in 
 !!                                  |reservoir
 !!    res_bactp(:)     |# cfu/100ml |persistent bacteria stored in reservoir

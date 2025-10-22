@@ -1,4 +1,4 @@
-      subroutine tgen(j)
+       subroutine tgen(j)
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine generates temperature data when the user chooses to 

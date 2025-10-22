@@ -1,4 +1,4 @@
-      subroutine varinit
+       subroutine varinit
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine initializes variables for the daily simulation of the 

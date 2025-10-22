@@ -1,4 +1,4 @@
-      subroutine structure
+        subroutine structure
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    This subroutine adjusts dissolved oxygen content for aeration at

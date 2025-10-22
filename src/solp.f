@@ -1,4 +1,4 @@
-      subroutine solp
+       subroutine solp
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine calculates the amount of phosphorus lost from the soil

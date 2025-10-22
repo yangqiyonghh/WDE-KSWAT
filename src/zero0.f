@@ -1,5 +1,5 @@
       subroutine zero0
-
+ 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine initializes the values for some of the arrays 
 

@@ -1,4 +1,4 @@
-      subroutine smeas
+       subroutine smeas
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine reads in daily solar radiation data and assigns the

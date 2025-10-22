@@ -1,4 +1,4 @@
-      subroutine rtsed_kodatie
+       subroutine rtsed_kodatie
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine routes sediment from subbasin to basin outlets

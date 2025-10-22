@@ -1,4 +1,4 @@
-      subroutine surface
+       subroutine surface
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine models surface hydrology at any desired time step

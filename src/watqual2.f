@@ -1,4 +1,4 @@
-      subroutine watqual2
+       subroutine watqual2
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine performs in-stream nutrient transformations and water

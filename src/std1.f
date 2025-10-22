@@ -1,4 +1,4 @@
-      subroutine std1
+       subroutine std1
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes general information to the standard output file

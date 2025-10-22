@@ -7,7 +7,7 @@
 !!    ~ ~ ~ INCOMING VARIABLES ~ ~ ~
 !!    name        |units         |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-!!    bactkdq     |none          |Bacteria partition coefficient.
+!!    bactkdq     |none          |Bacteria partition coefficie nt.
 !!                               |Partition coefficient for bacteria between
 !!                               |soluble and sorbed phase in surface runoff.
 !!    bactlp_plt(:)|# cfu/m^2    |less persistent bacteria on foliage

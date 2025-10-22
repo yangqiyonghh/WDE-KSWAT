@@ -1,4 +1,4 @@
-      subroutine watuse
+       subroutine watuse
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine removes water from appropriate source (pond,

@@ -3,7 +3,7 @@
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine zeros values for single array variables
 
-      use parm
+      use parm 
       lid_file = ""
       dpd_file = ""
       wpd_file = ""

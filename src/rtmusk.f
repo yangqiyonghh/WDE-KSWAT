@@ -1,4 +1,4 @@
-      subroutine rtmusk
+       subroutine rtmusk
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine routes a daily flow through a reach using the

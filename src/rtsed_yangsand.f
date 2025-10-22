@@ -1,4 +1,4 @@
-      subroutine rtsed_yangsand
+       subroutine rtsed_yangsand
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine routes sediment from subbasin to basin outlets

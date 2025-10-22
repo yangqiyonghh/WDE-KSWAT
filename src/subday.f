@@ -1,4 +1,4 @@
-      subroutine subday
+       subroutine subday
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes daily subbasin output to the output.sub file

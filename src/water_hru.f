@@ -1,4 +1,4 @@
-      subroutine water_hru
+       subroutine water_hru
             
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    

@@ -1,4 +1,4 @@
-      subroutine snom
+       subroutine snom
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine predicts daily snom melt when the average air

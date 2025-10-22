@@ -1,4 +1,4 @@
-      subroutine sim_initday
+       subroutine sim_initday
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine initialized arrays at the beginning of the day
@@ -248,7 +248,7 @@
 	sub_rspc_d =0.
       
       
-      !!ÑÒÈÜ
+      !!    
       Q_sur_sec=0.
       Q_sur_eh=0.
       !Q_karst_S=0.
@@ -269,7 +269,7 @@
       
       
       
-      !!ÑÒÈÜ
+      !!    
       !!add by zhang
       !!==========================
 	

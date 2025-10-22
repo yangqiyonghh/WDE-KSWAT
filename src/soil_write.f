@@ -1,4 +1,4 @@
-      subroutine soil_write
+       subroutine soil_write
 
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine writes output to the output.sol file

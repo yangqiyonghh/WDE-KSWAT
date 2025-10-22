@@ -208,7 +208,7 @@
       minpsloss = 0.
       minpaloss = 0.
 
-      qin = qday * pot_fr(j)   !inflow = surface flow流入坑洞的流量
+      qin = qday * pot_fr(j)   !inflow = surface flow    佣       
       qdayi = qday
       qday = qday * (1. - pot_fr(j))
       potloss = qdayi - qday
@@ -219,18 +219,18 @@
       cnv = 10. * hru_ha(j)
       rto = 1.
 
-!     when water is impounding蓄水时
+!     when water is impounding  水时
       if (imp_trig(j) == 1) return
         
 !       update volume of water in pothole
 !       pot_fr is now the fraction of the hru draining into the pothole
 !       the remainder (1-pot_fr) goes directly to runoff
-        pot_vol(j) = pot_vol(j) + qin!洼地的蓄水量(mm)
-        potflwi(j) = potflwi(j) + qin!进入坑洞的流量
+        pot_vol(j) = pot_vol(j) + qin! 莸氐   水  (mm)
+        potflwi(j) = potflwi(j) + qin!    佣       
 
 !       compute surface area assuming a cone shape (m^2)
-        potvol_m3 = pot_vol(j) * cnv!!洼地的蓄水量(m3)
-        potsa(j) = pi * (3. * potvol_m3 / (pi * hru_slp(j)))**.6666!蓄水的表面积
+        potvol_m3 = pot_vol(j) * cnv!! 莸氐   水  (m3)
+        potsa(j) = pi * (3. * potvol_m3 / (pi * hru_slp(j)))**.6666!  水 谋    
         potsa(j) = potsa(j) / 10000.                  !convert to ha  
         if (potsa(j) <= 0.000001) then
           potsa(j) = 0.001
@@ -291,7 +291,7 @@
         sedminps(j) = sedminps(j) * yy
         sedminpa(j) = sedminpa (j) * yy
 
-!       if overflow, then send the overflow to the HRU surface flow  !如果溢流，则将溢流送至HRU表面流
+!       if overflow, then send the overflow to the HRU surface flow  !                   HRU      
         if (pot_vol(j) > pot_volxmm(j)) then
           qdr(j) = qdr(j) + (pot_vol(j)- pot_volxmm(j))
 !          qday = qday + (pot_vol(j)- pot_volxmm(j))
@@ -341,7 +341,7 @@
         end if       !! if overflow 
           
 !      If no overflow, compute settling and losses, surface inlet tile
-!      flow, evap, seepage, and redistribute soil water如果没有溢流，计算沉降和损失，表面进口瓦流，蒸发，渗流，并重新分配土壤水
+!      flow, evap, seepage, and redistribute soil water   没                   失                               路       水
        if (pot_vol(j) > 1.e-6) then
 !        compute settling -clay and silt based on fall velocity (v=411*d2) d=mm, v=m/hr
          pot_depth = pot_vol(j)
@@ -391,7 +391,7 @@
         sumo = sumo + tileo
         tile_out(j) = tile_out(j) + tileo
           
-!       limit seepage into soil if profile is near field capacity当剖面为近场承载力时，限制入士的渗流
+!       limit seepage into soil if profile is near field capacity      为          时        士      
          if (pot_k(j) > 0.) then
            yy = pot_k(j)
          else

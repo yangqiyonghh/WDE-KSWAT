@@ -1,4 +1,4 @@
-      subroutine sub_subbasin 
+       subroutine sub_subbasin 
 !!!!!!!!!!!!!!!!!!!!!This was split out from subbasin.f 01-13-2012 nubz
 !!!!!!!!!!!!!!!!!!!!!comments should be updated
 !!    ~ ~ ~ PURPOSE ~ ~ ~

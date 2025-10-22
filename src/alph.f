@@ -8,7 +8,7 @@
 !!    name        |units       |definition
 !!    ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
 !!    amp_r(:,:)  |none        |alpha factor for rain(mo max 0.5h rain)
-!!    idg(:)      |none        |array location of random number seed
+!!    idg(:)      |none s        |array location of random number seed
 !!                             |used for a given process
 !!    idt         |minutes     |length of time step used to report
 !!                             |precipitation data for sub-daily modeling

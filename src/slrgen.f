@@ -1,4 +1,4 @@
-      subroutine slrgen(j)
+        subroutine slrgen(j)
       
 !!    ~ ~ ~ PURPOSE ~ ~ ~
 !!    this subroutine generates solar radiation
