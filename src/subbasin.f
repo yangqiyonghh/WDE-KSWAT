@@ -195,9 +195,7 @@
       endif
       
 
-      !计算干湿事件的指标
-        !wdps=50.3
-        !wgps=0.9
+
       if (api_idum==1)then
       if (station_flag==1 .and. (inum1==1 .or. inum1==2 .or.inum1==3 .or.inum1==4 .or.inum1==24 .or.inum1==25 .or.inum1==26 .or.
      &      inum1==27 .or.inum1==28 .or.inum1==29 .or.inum1==30 .or.inum1==31 .or.inum1==32.or.inum1==33 .or.inum1==34 .or.inum1==37
@@ -223,7 +221,7 @@
               api_id=365
           endif
 
-          !另外一种改进
+          !
           !wapi_all_1=0.
           wapi1=0.
           wapi2=0.
@@ -241,7 +239,7 @@
               WAPI_1(j)=wapi_all_1(j)/365
               api_id=365
           endif          
-          !另外一种改进          
+          !       
           
           
           
@@ -266,7 +264,7 @@
           WAPI(j)=(wapi_all1  + WAPI(j)*api_id)/(1+api_id)
           
           
-       !改进形式开始
+       !
           wapi_all1=0.
           wapi1=0.
           wapi2=0.
@@ -284,7 +282,7 @@
           IWAPI_1(j)=(wapi_all1-WAPI_1(j))/(WAPI_1(j)+wapi_all1)    
           WAPI_1(j)=(wapi_all1  + WAPI_1(j)*api_id)/(1+api_id)
 
-          !该进形式结束          
+          !          
           
           
           
@@ -312,7 +310,7 @@
           endif
           
           
-          !另外一种改进开始
+          !
           !wapi_all_1=0.
           wapi1=0.
           wapi2=0.
@@ -329,7 +327,7 @@
               WAPI_1(j)=wapi_all_1(j)/365
               api_id=365
           endif          
-          !另外一种改进结束
+          !
           
           
           else
@@ -354,7 +352,7 @@
           
           
           
-       !改进形式开始
+       !
           wapi_all1=0.
           wapi1=0.
           wapi2=0.
@@ -380,7 +378,7 @@
           IWAPI(j)=0.
           IWAPI_1(j)=0.
       endif
-      !计算干湿事件的指标      
+      !    
       !IWAPI(j)=0.
       
       if (curyr==1 .and. i==1)origin_sol_k_parm(:,j)=sol_k(:,j)
@@ -391,7 +389,7 @@
       if (curyr==1 .and. i==1)origin_Ia=0.2
       if (curyr==1 .and. i==1)origin_ch_n(inum1)=ch_n(2,inum1)
       if (curyr==1 .and. i==1)origin_ch_k(inum1)=ch_k(2,inum1)
-      !原始模型的干湿事件计算
+      !
       sol_k(:,j)=(2.71**IWAPI_1(j))*origin_sol_k_parm(:,j)
       alpha_bfe(j)=(2.71**IWAPI(j))*origin_gw1_parm(j)
       esco(j)=(2.71**IWAPI_1(j))*origin_esco_parm(j)
@@ -411,7 +409,7 @@
       surf_Ia=max(surf_Ia,0.00001)
       
       
-      !原始模型的干湿事件计算
+      !
       if (station_flag==1 .and. (inum1==1 .or. inum1==2 .or.inum1==3 .or.inum1==4 .or.inum1==24 .or.inum1==25 .or.inum1==26 .or.
      &      inum1==27 .or.inum1==28 .or.inum1==29 .or.inum1==30 .or.inum1==31 .or.inum1==32.or.inum1==33 .or.inum1==34 .or.inum1==37
      & .or.inum1==43.or.inum1==44 .or.inum1==46 .or.inum1==23))then
@@ -419,45 +417,45 @@
       
           
          
-      alpha_delay1=(2.71**(-IWAPI(j)))*karst_parm(1)!(0.1-5)下渗给表层岩溶带的延迟系数，就是比如土壤下渗量并不是一下子就补给到岩溶带中，存在滞时
-      alpha_delay2=(2.71**(-IWAPI(j)))*karst_parm(2)!(0.1-5)表层岩溶带传递给基质的过程，,存在滞时
-      sur_karst_h1=karst_parm(3)!(1-50)表层岩溶带发生延迟流的阈值水深
-      sur_karst_h2=(karst_parm(3)+karst_parm(4))!(1-20)表层岩溶带发生二次流的阈值水深
-      k_sec=(2.71**IWAPI(j))*karst_parm(5)!(0.0001-0.5)表层岩溶带二次流的出流比流量系数(线性出流)
-      k_eh=(2.71**IWAPI(j))*karst_parm(6)!(0.0001-0.5)表层岩溶带延迟出流比流量系数
-      alpha_eh=(2.71**IWAPI(j))*karst_parm(7)!(0.5-2)表层岩溶带延迟出流指数系数
-      k_f=(2.71**IWAPI(j))*karst_parm(8)!(0.0001-0.5)表层岩溶带传递给管道流，这里与基质流传递方式不一样，线性传递
-      gw_karst_delaye=karst_parm(9)!(2.71**(-IWAPI(j)))*karst_parm(9)!(0.1-5)补给地下岩溶基质的延迟系数
-      gw_alpha_bfe=karst_parm(10)!(2.71**(-IWAPI(j)))*karst_parm(10)!(0.1-5)地下岩溶基质出流的延迟系数
-      k_fm=(2.71**IWAPI(j))*karst_parm(11)!(0.0001-0.5)管道流的出流系数
-      alpha_FM=(2.71**IWAPI(j))*karst_parm(12)!(0.5-3)管道流的比流量指数系数?
-      k_sc=(2.71**IWAPI(j))*karst_parm(13)!(0.0001-0.5)基质和管道的交换系数
-      alpha_sc=(2.71**IWAPI(j))*karst_parm(14)!(0.1-1)基质和管道的交换指数
-      karst_he=karst_parm(15) !(1-25)表层岩溶带初始水深
-      karst_hs=karst_parm(16)!(1-25)基质初始水深
-      karst_hf=karst_parm(17)!(1-25)管道初始水深
-      gw_karst_h1=karst_parm(18)!岩溶基质阈值水深(1-50)
-      gw_karst_h2=karst_parm(19)!岩溶管道阈值水深(1-50) 
+      alpha_delay1=(2.71**(-IWAPI(j)))*karst_parm(1)
+      alpha_delay2=(2.71**(-IWAPI(j)))*karst_parm(2)
+      sur_karst_h1=karst_parm(3)
+      sur_karst_h2=(karst_parm(3)+karst_parm(4))
+      k_sec=(2.71**IWAPI(j))*karst_parm(5)
+      k_eh=(2.71**IWAPI(j))*karst_parm(6)
+      alpha_eh=(2.71**IWAPI(j))*karst_parm(7)
+      k_f=(2.71**IWAPI(j))*karst_parm(8)
+      gw_karst_delaye=karst_parm(9)!(2.71**(-IWAPI(j)))*karst_parm(9)
+      gw_alpha_bfe=karst_parm(10)!(2.71**(-IWAPI(j)))*karst_parm(10)
+      k_fm=(2.71**IWAPI(j))*karst_parm(11)
+      alpha_FM=(2.71**IWAPI(j))*karst_parm(12)
+      k_sc=(2.71**IWAPI(j))*karst_parm(13)
+      alpha_sc=(2.71**IWAPI(j))*karst_parm(14)
+      karst_he=karst_parm(15)
+      karst_hs=karst_parm(16)
+      karst_hf=karst_parm(17)
+      gw_karst_h1=karst_parm(18)
+      gw_karst_h2=karst_parm(19)
       else
-      alpha_delay1=karst_parm(1)!(0.1-5)下渗给表层岩溶带的延迟系数，就是比如土壤下渗量并不是一下子就补给到岩溶带中，存在滞时
-      alpha_delay2=karst_parm(2)!(0.1-5)表层岩溶带传递给基质的过程，,存在滞时
-      sur_karst_h1=karst_parm(3)!(1-50)表层岩溶带发生延迟流的阈值水深
-      sur_karst_h2=(karst_parm(3)+karst_parm(4))!(1-20)表层岩溶带发生二次流的阈值水深
-      k_sec=karst_parm(5)!(0.0001-0.5)表层岩溶带二次流的出流比流量系数(线性出流)
-      k_eh=karst_parm(6)!(0.0001-0.5)表层岩溶带延迟出流比流量系数
-      alpha_eh=karst_parm(7)!(0.5-2)表层岩溶带延迟出流指数系数
-      k_f=karst_parm(8)!(0.0001-0.5)表层岩溶带传递给管道流，这里与基质流传递方式不一样，线性传递
-      gw_karst_delaye=karst_parm(9)!(2.71**(-IWAPI(j)))*karst_parm(9)!(0.1-5)补给地下岩溶基质的延迟系数
-      gw_alpha_bfe=karst_parm(10)!(2.71**(-IWAPI(j)))*karst_parm(10)!(0.1-5)地下岩溶基质出流的延迟系数
-      k_fm=karst_parm(11)!(0.0001-0.5)管道流的出流系数
-      alpha_FM=karst_parm(12)!(0.5-3)管道流的比流量指数系数?
-      k_sc=karst_parm(13)!(0.0001-0.5)基质和管道的交换系数
-      alpha_sc=karst_parm(14)!(0.1-1)基质和管道的交换指数
-      karst_he=karst_parm(15) !(1-25)表层岩溶带初始水深
-      karst_hs=karst_parm(16)!(1-25)基质初始水深
-      karst_hf=karst_parm(17)!(1-25)管道初始水深
-      gw_karst_h1=karst_parm(18)!岩溶基质阈值水深(1-50)
-      gw_karst_h2=karst_parm(19)!岩溶管道阈值水深(1-50)           
+      alpha_delay1=karst_parm(1)
+      alpha_delay2=karst_parm(2)
+      sur_karst_h1=karst_parm(3)
+      sur_karst_h2=(karst_parm(3)+karst_parm(4))
+      k_sec=karst_parm(5)
+      k_eh=karst_parm(6)
+      alpha_eh=karst_parm(7)
+      k_f=karst_parm(8)
+      gw_karst_delaye=karst_parm(9)
+      gw_alpha_bfe=karst_parm(10)
+      k_fm=karst_parm(11)
+      alpha_FM=karst_parm(12)
+      k_sc=karst_parm(13)
+      alpha_sc=karst_parm(14)
+      karst_he=karst_parm(15) 
+      karst_hs=karst_parm(16)
+      karst_hf=karst_parm(17)
+      gw_karst_h1=karst_parm(18)
+      gw_karst_h2=karst_parm(19)       
           
           
       endif
@@ -476,48 +474,48 @@
          
       if (api_idum==1)then  
 
-      alpha_delay1=(2.71**(-IWAPI(j)))*sftmp!(0.1-5)下渗给表层岩溶带的延迟系数，就是比如土壤下渗量并不是一下子就补给到岩溶带中，存在滞时
-      alpha_delay2=(2.71**(-IWAPI(j)))*smtmp!(0.1-5)表层岩溶带传递给基质的过程，,存在滞时
-      sur_karst_h1=smfmn!(2.71**(-IWAPI(j)))*smfmn!(1-50)表层岩溶带发生延迟流的阈值水深
-      sur_karst_h2=(smfmn+smfmx)!(2.71**(-IWAPI(j)))*(smfmn+smfmx)!(1-20)表层岩溶带发生二次流的阈值水深
-      k_sec=(2.71**IWAPI(j))*timp!(0.0001-0.5)表层岩溶带二次流的出流比流量系数(线性出流)
-      k_eh=(2.71**IWAPI(j))*snocovmx!(0.0001-0.5)表层岩溶带延迟出流比流量系数
-      alpha_eh=(2.71**IWAPI(j))*sno50cov!(0.5-2)表层岩溶带延迟出流指数系数
-      k_f=(2.71**IWAPI(j))*spcon_bsn!(0.0001-0.5)表层岩溶带传递给管道流，这里与基质流传递方式不一样，线性传递
-      gw_karst_delaye=spexp_bsn!(2.71**(-IWAPI(j)))*spexp_bsn!(2.71**(-IWAPI(j)))*spexp_bsn!(0.1-5)补给地下岩溶基质的延迟系数
-      gw_alpha_bfe=n_updis!(2.71**(-IWAPI(j)))*n_updis!(2.71**(-IWAPI(j)))*n_updis!(0.1-5)地下岩溶基质出流的延迟系数
-      k_fm=(2.71**IWAPI(j))*p_updis!(0.0001-0.5)管道流的出流系数
-      alpha_FM=(2.71**IWAPI(j))*pperco_bsn!(0.5-3)管道流的比流量指数系数?
-      k_sc=(2.71**IWAPI(j))*phoskd_bsn!(0.0001-0.5)基质和管道的交换系数
-      alpha_sc=(2.71**IWAPI(j))*psp_bsn!(0.1-1)基质和管道的交换指数
-      karst_he=RCN11 !(1-25)表层岩溶带初始水深
-      karst_hs=nperco_bsn!(1-25)基质初始水深
-      karst_hf=eros_spl!(1-25)管道初始水深
-      gw_karst_h1=wdpq!(2.71**(-IWAPI(j)))*wdpq!岩溶基质阈值水深(1-50)
-      gw_karst_h2=wgpq!(2.71**(-IWAPI(j)))*wgpq!岩溶管道阈值水深(1-50)           
+      alpha_delay1=(2.71**(-IWAPI(j)))*sftmp
+      alpha_delay2=(2.71**(-IWAPI(j)))*smtmp
+      sur_karst_h1=smfmn!(2.71**(-IWAPI(j)))*smfmn
+      sur_karst_h2=(smfmn+smfmx)!(2.71**(-IWAPI(j)))*(smfmn+smfmx)
+      k_sec=(2.71**IWAPI(j))*timp
+      k_eh=(2.71**IWAPI(j))*snocovmx
+      alpha_eh=(2.71**IWAPI(j))*sno50cov
+      k_f=(2.71**IWAPI(j))*spcon_bsn!
+      gw_karst_delaye=spexp_bsn!(2.71**(-IWAPI(j)))*spexp_bsn!(2.71**(-IWAPI(j)))*spexp_bsn
+      gw_alpha_bfe=n_updis!(2.71**(-IWAPI(j)))*n_updis!(2.71**(-IWAPI(j)))*n_updis
+      k_fm=(2.71**IWAPI(j))*p_updis
+      alpha_FM=(2.71**IWAPI(j))*pperco_bsn
+      k_sc=(2.71**IWAPI(j))*phoskd_bsn
+      alpha_sc=(2.71**IWAPI(j))*psp_bsn
+      karst_he=RCN11 
+      karst_hs=nperco_bsn
+      karst_hf=eros_spl
+      gw_karst_h1=wdpq!(2.71**(-IWAPI(j)))*wdpq
+      gw_karst_h2=wgpq!(2.71**(-IWAPI(j)))*wgpq        
           
 
       
       else
-      alpha_delay1=sftmp!(0.1-5)下渗给表层岩溶带的延迟系数，就是比如土壤下渗量并不是一下子就补给到岩溶带中，存在滞时
-      alpha_delay2=smtmp!(0.1-5)表层岩溶带传递给基质的过程，,存在滞时
-      sur_karst_h1=smfmn!(1-50)表层岩溶带发生延迟流的阈值水深
-      sur_karst_h2=(smfmn+smfmx)!(1-20)表层岩溶带发生二次流的阈值水深
-      k_sec=timp!(0.0001-0.5)表层岩溶带二次流的出流比流量系数(线性出流)
-      k_eh=snocovmx!(0.0001-0.5)表层岩溶带延迟出流比流量系数
-      alpha_eh=sno50cov!(0.5-2)表层岩溶带延迟出流指数系数
-      k_f=spcon_bsn!(0.0001-0.5)表层岩溶带传递给管道流，这里与基质流传递方式不一样，线性传递
-      gw_karst_delaye=spexp_bsn!(2.71**(-IWAPI(j)))*spexp_bsn!(0.1-5)补给地下岩溶基质的延迟系数
-      gw_alpha_bfe=n_updis!(2.71**(-IWAPI(j)))*n_updis!(0.1-5)地下岩溶基质出流的延迟系数
-      k_fm=p_updis!(0.0001-0.5)管道流的出流系数
-      alpha_FM=pperco_bsn!(0.5-3)管道流的比流量指数系数?
-      k_sc=phoskd_bsn!(0.0001-0.5)基质和管道的交换系数
-      alpha_sc=psp_bsn!(0.1-1)基质和管道的交换指数
-      karst_he=RCN11 !(1-25)表层岩溶带初始水深
-      karst_hs=nperco_bsn!(1-25)基质初始水深
-      karst_hf=eros_spl!(1-25)管道初始水深
-      gw_karst_h1=wdpq!岩溶基质阈值水深(1-50)
-      gw_karst_h2=wgpq!岩溶管道阈值水深(1-50)             
+      alpha_delay1=sftmp
+      alpha_delay2=smtmp
+      sur_karst_h1=smfmn
+      sur_karst_h2=(smfmn+smfmx)
+      k_sec=timp
+      k_eh=snocovmx
+      alpha_eh=sno50cov
+      k_f=spcon_bsn
+      gw_karst_delaye=spexp_bsn
+      gw_alpha_bfe=n_updis
+      k_fm=p_updis
+      alpha_FM=pperco_bsn
+      k_sc=phoskd_bsn
+      alpha_sc=psp_bsn
+      karst_he=RCN11 
+      karst_hs=nperco_bsn
+      karst_hf=eros_spl
+      gw_karst_h1=wdpq
+      gw_karst_h2=wgpq            
           
           
       endif
@@ -576,26 +574,25 @@
         if (yr_skip(j) == 0) call operatn
           
         if (auto_wstr(j) > 1.e-6 .and. irrsc(j) > 2) call autoirr    
-        if (karst_hru(j)==2)inflpcp=precipday+inflpcp+surf_bs(1,j) !岩溶洼地
-        if (hru_slp(j)*100>50 .and. karst_hru(j)==1)go to 888!高坡度，石漠化区域，忽略土壤层的计算，直接到表层岩溶带
+        if (karst_hru(j)==2)inflpcp=precipday+inflpcp+surf_bs(1,j) 
+        if (hru_slp(j)*100>50 .and. karst_hru(j)==1)go to 888
         !! 执行土壤水分路线
          
         call percmain
 888     continue
         !! 计算蒸发蒸腾量
         call etpot
-        if (hru_slp(j)*100>50 .and.karst_hru(j)==1 )go to 889!高坡度，石漠化区域，忽略土壤层的计算，直接到表层岩溶带        
+        if (hru_slp(j)*100>50 .and.karst_hru(j)==1 )go to 889   
 !        if (pot_vol(j) < 1.e-6) call etact
-        call etact!土壤蒸发
+        call etact
 889     continue
         
         !岩溶洼地的计算
-        !if (karst_hru(j)==2)call karst_pond!岩溶洼地hru
+        !if (karst_hru(j)==2)call karst_pond
         
         !表层岩溶带的计算
-        if (karst_hru(j)>=1)call surface_karst!岩溶hru
-        !if (karst_hru(j)>=1 .and. j==546)print*,i,sur_karst_height(j),Q_sur_sec(j),Q_sur_eh(j),Q_karst_S(j),Q_karst_F(j)
-        !! 使用气候驱动因素计算地下水位深度
+        if (karst_hru(j)>=1)call surface_karst
+
         call wattable
 
         !! new CN method
@@ -778,52 +775,41 @@
 	 !  if (bmp_flag(j) == 1) then
        !   call bmpfixed
        ! end if
-          if (sub_karst==1)then!计算刁江
-              if (karst_hru(j)==1)then!为岩溶hru
-              !这些子流域在原始流域中是不存在的，因为根据dem水文分析没有包含这些，如果是开始进行岩溶流域计算，只需把以下子流域的地下水加上就行
+          if (sub_karst==1)then
+              if (karst_hru(j)==1)then
+              
                   if (inum1==13.or.inum1==14 .or.inum1==15 .or.inum1==16.or.inum1==17.or.inum1==18.or.inum1==20 .or. inum1==21)then 
                      qdr(j) =  latq(j) + gw_q(j)+ gw_qdeep(j)+Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
-      !               if (iyr==2008 .and.(i==164 .or. i==165))print*,1
-      !               if (iyr==2008 .and.(i==164 .or. i==165))print*,precipday,latq(j) , gw_q(j)+ gw_qdeep(j)+Q_karst_FM(j)+
-      !&           Q_sur_sec(j)+Q_sur_eh(j)
+
                   else
                      qdr(j) = qday + latq(j) + gw_q(j) + qtile + gw_qdeep(j) +Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
-      !               if (iyr==2008 .and.(i==164 .or. i==165 .or. i==163).and. (J==1))print*,i,J
-      !               if (iyr==2008 .and.(i==164 .or. i==165 .or. i==163).and. (J==1))print*,precipday,qday,
-      !&               latq(j) ,  gw_q(j) + qtile + gw_qdeep(j) +Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
-      !               if (iyr==2008 .and.(i==164 .or. i==165 .or. i==163).and. (J==1))print*,inflpcp,sepbtm(j)     
-      !               if (iyr==2008 .and.(i==164 .or. i==165 .or. i==163).and. (J==1))print*,  ""                    
+ ""                    
                   endif
                   
-              elseif (karst_hru(j)==2)then!岩溶洼地
+              elseif (karst_hru(j)==2)then
                      qdr(j) =  latq(j) + gw_q(j)+ gw_qdeep(j)+Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
-      !               if (iyr==2008 .and.(i==164 .or. i==165))print*,3
-      !                if (iyr==2008 .and.(i==164 .or. i==165))print*,precipday,qday , latq(j) ,gw_q(j)+ gw_qdeep(j)+Q_karst_FM(j)+
-      !&                 Q_sur_sec(j)+ Q_sur_eh(j)
-              else!不是岩溶hru
+
+              else!
                  qdr(j) = qday + latq(j) + gw_q(j) + qtile + gw_qdeep(j) 
-                 !if (iyr==2008 .and.(i==164 .or. i==165))print*,4
-                 !if (iyr==2008 .and.(i==164 .or. i==165))print*,precipday,qday , latq(j) , gw_q(j), gw_qdeep(j) 
-                 !
+           
               endif
               
 
           else!计算滂江
-              if (karst_hru(j)==1)then!为岩溶hru
-                  if (inum1==48.or.inum1==49 )then!子流域在隔壁流域的
+              if (karst_hru(j)==1)then!
+                  if (inum1==48.or.inum1==49 )then!
                      qdr(j) = latq(j) + gw_q(j)+ gw_qdeep(j)+Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
                   else 
                      qdr(j) = qday + latq(j) + gw_q(j) + qtile + gw_qdeep(j) +Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
                   endif
-              elseif (karst_hru(j)==2)then!为岩溶洼地hru
+              elseif (karst_hru(j)==2)then!
                    qdr(j) =  latq(j) + gw_q(j)+ gw_qdeep(j)+Q_karst_FM(j)+ Q_sur_sec(j)+ Q_sur_eh(j)
-              else!不是岩溶hru
+              else!
                   qdr(j) = qday + latq(j) + gw_q(j) + qtile + gw_qdeep(j) 
               endif
               
           end if
-              !if (i==155 .and. inum1==27)print*,qdr(j),karst_hru(j),Q_karst_FM(j),Q_sur_sec(j), Q_sur_eh(j)
-        !! compute water yield for HRU
+
         
         if (qdr(j) < 0.) qdr(j) = 0.
         if (qdr(j) > 0.) then
