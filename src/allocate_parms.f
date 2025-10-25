@@ -1905,7 +1905,7 @@
       allocate(Aquifer_recharge(msub))
       allocate(Conduct_recharge(msub))
       allocate(Matrix_conduct_flow_exchange(msub))
-      allocate(karst_sc1(msub))
+      allocate(karst_sc1(mhru))
       allocate(Q_karst_S1(mhru))
       allocate(Q_karst_F1(mhru))
        !Tillage factor on SOM decomposition
